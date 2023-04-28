@@ -1,12 +1,9 @@
-import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-// import Home from './Home';
+// import logo from './logo.svg';
 import imag from './do.svg';
 
 import './App.css';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <img className='do' src={imag} alt="dodo" />
@@ -16,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

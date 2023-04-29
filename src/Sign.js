@@ -8,8 +8,13 @@ function Sign() {
         <form className='userForm' action="">
             <h1 className='start'>Get Started</h1>
             <h2>add a photo</h2>
+            
             <div className='circle'>
+              <label for="file-upload" class="custom-file-upload">
               <img id='cam' src={imag} alt="cam img" />
+              </label>
+              <input id="file-upload" type="file"></input>
+
             </div>
             <h2>fill in you name</h2>
             <div className='inputdiv'>

@@ -1,3 +1,5 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
 .App{
   width: 80%;
   height: 100%;
@@ -11,12 +13,31 @@
   
 }
 
+.do{
+  top: 74px;
+  left: 638px;
+  width: 90px;
+  height: 165px;
+  opacity: 1;
+}
 
+.keep{
+  /* top: 285px; */
+margin:  46px auto;
+width: auto;
+height: 76px;
+color: var(--unnamed-color-ffffff);
+text-align: center;
+font: normal normal 600 54px/81px Poppins;
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: capitalize;
+opacity: 1;
+}
 
-button{
+.star{
   
-  top: 510px;
-  left: 489px;
+  margin: 149px auto;
   width: 388px;
   height: 98px;
   /* UI Properties */
@@ -27,7 +48,7 @@ button{
   
 
 }
-button:hover{
+.star:hover{
  
   background-color: #FFFFFF;
   /* UI Properties */
@@ -45,6 +66,7 @@ letter-spacing: 0px;
 color: #000000;
 text-transform: capitalize;
 opacity: 1;
+border: none;
 }
 
 h1{

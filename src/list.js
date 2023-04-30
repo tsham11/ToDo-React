@@ -12,7 +12,8 @@ return (
             <div className='circlemin'>
             </div>
         </header>
-        <div className='list-item-body'>
+        <form className='list-item-body'>
+        <div>
             <h1 className='daily'>Add Your Daily Tasks</h1>
             <div className="mytsk-btn-div">
                 <div className='my-task'>
@@ -21,6 +22,8 @@ return (
                 <button className='add-btn' id='add-butn'>Add</button>
             </div>
         </div>
+        </form>
+
     </div>
 )
 }

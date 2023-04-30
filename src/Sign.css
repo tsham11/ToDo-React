@@ -4,6 +4,7 @@
 
 .User{
   width: 80%;
+
   height: 100%;
   background-color: rgb(0, 0, 0);
   display: block;
@@ -60,9 +61,8 @@ opacity: 1;
 margin: auto;
 width: 122px;
 height: 122px;
-
+background-size: cover;
 /* UI Properties */
-background: var(--unnamed-color-e6ebff) 0% 0% no-repeat padding-box;
 background: #E6EBFF 0% 0% no-repeat padding-box;
 border-radius: 50%;
 opacity: 1;
@@ -75,26 +75,35 @@ top: 225px;
 left: 622px;
 width: 122px;
 height: 122px;
-background: var(--unnamed-color-5efc8d) 0% 0% no-repeat padding-box;
 background: #5EFC8D 0% 0% no-repeat padding-box;
 opacity: 1;
 }
 
 img#cam {
   margin: 41px auto;
-
+  background-size: cover;
   /* display: block; */
   width: 44px;
   height: 40px;
   
-
 }
+
+img#camprev {
+  margin: auto;
+  background-size: cover;
+  /* display: block; */
+  width: 122px;
+  height: 122px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
 .inputdiv{
 margin: auto;
 width: 487px;
 height: 76px;
 /* UI Properties */
-background: var(--unnamed-color-e6ebff) 0% 0% no-repeat padding-box;
 background: #E6EBFF 0% 0% no-repeat padding-box;
 border-radius: 4px;
 opacity: 1;
@@ -102,18 +111,17 @@ display: flex;
 justify-content: left;
 }
 
-input{
+.inpt{
 margin-left: 24px;
 margin-top: 23px;
-width: 119px;
+width: auto;
 height: 31px;
 border: none;
-color: var(--unnamed-color-000000);
 text-align: left;
 font: normal normal 300 22px/33px Poppins;
 letter-spacing: 0px;
 color: #000000;
-text-transform: lowercase;
+text-transform: initial;
 opacity: 0.2;
 }
 
@@ -152,6 +160,8 @@ opacity: 1;
 }
 
 .custom-file-upload {
+  width: fit-content;
+  height: fit-content;
   display: inline-block;
   cursor: pointer;
   background: transparent;

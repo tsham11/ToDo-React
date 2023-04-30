@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
 import './list.css';
 function list() {
    
+    const myname = localStorage.getItem('name');
+        
+    
+
   return (
     <div className='listdiv'>
         <header className='head'>
             <h1 className='todo'>TO DO</h1>
-            <h2 className='list-name'>Your Name</h2>    
+            <h2 id='getname' className='list-name'>{myname}</h2>    
             <div className='circlemin'>
             
     

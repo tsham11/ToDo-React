@@ -1,22 +1,26 @@
-import React, { useState }  from 'react';
+import React, { useRef, useState }  from 'react';
 import { useNavigate } from 'react-router-dom';
 import imag from './cam.svg';
 import './Sign.css';
 
 function Sign() {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const data=useRef();
   function click(){
-    document.querySelector("#file-upload").addEventListener("change", function(){
-      console.log(this.files)
-    const reader = new FileReader();
 
-    reader.addEventListener("load", ()=> {
-      localStorage.setItem("recent-image", reader.result);
-    });
-    reader.readAsDataURL(this.files[0]);
+      localStorage.setItem("name", data.current.value )
+
+  //   document.querySelector("#file-upload").addEventListener("change", function(){
+  //     console.log(this.files)
+  //   const reader = new FileReader();
+
+  //   reader.addEventListener("load", ()=> {
+  //     localStorage.setItem("recent-image", reader.result);
+  //   });
+  //   reader.readAsDataURL(this.files[0]);
    
-  });
+  // });
 
   navigate('/list');
   }
@@ -52,7 +56,7 @@ function Sign() {
             </div>
             <h2>fill in you name</h2>
             <div className='inputdiv'>
-              <input className='inpt' type="text" placeholder='your name'/>
+              <input ref={data} className='inpt' type="text" placeholder='your name'/>
             </div>
             <button className='sign-btn' id='butn' onClick={click}>Sign In</button>
             

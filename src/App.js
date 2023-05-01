@@ -5,7 +5,7 @@ import { Route, Routes} from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Sign from './Sign';
-import List from './list';
+import List from './List';
 
 function App() {
   return (

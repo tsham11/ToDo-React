@@ -70,7 +70,7 @@ opacity: 1;
   margin: 0;
 }
 
-.inpt-s{
+/* .inpt-s{
 margin-left: 24px;
 margin-top: 23px;
 width: auto;
@@ -83,6 +83,17 @@ letter-spacing: 0px;
 color: #000000;
 text-transform: inherit;
 opacity: 0.2;
+} */
+
+.inpt-s{
+  top: 219px;
+    left: 386px;
+    width: 487px;
+    height: 76px;
+    /* UI Properties */
+    background: #E6EBFF 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
 }
 
 .daily{
@@ -103,7 +114,7 @@ opacity: 0.2;
     margin: auto;
     margin-top: 27px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
@@ -121,24 +132,33 @@ display: flex;
 justify-content: left;
 }
 
+.ts{
+  top: 346px;
+    left: 386px;
+    width: 595px;
+    height: 54px;
+    /* UI Properties */
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    color:white;
+    margin-top:10px;
+}
+
 .add-btn{
-
-  margin-right: 305px;
-
+  margin-right: 205px;
   width: 108px;
   height: 76px;
   /* UI Properties */
-  background: var(--unnamed-color-5efc8d) 0% 0% no-repeat padding-box;
   background: #5EFC8D 0% 0% no-repeat padding-box;
   border-radius: 4px;
   opacity: 1; 
   border: none;
   display: inline;
-
-
 }
 .add-btn:hover{
-
   background-color: #000000;
 }
 

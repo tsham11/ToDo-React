@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './list.css';
 import img from './done.svg';
 import image from './delete_forever.svg';
+import ReactDOM from 'react-dom/client';
 
 
 function List() {
@@ -31,6 +32,13 @@ function List() {
         setTasks(deleted);
         localStorage.setItem("localTasks", JSON.stringify(deleted))
     }
+    
+    
+
+    const changeStyles = () => {
+    let element = document.getElementById('#changeid')
+    ReactDOM.findDOMNode(element).style.backgroundColor = this.state.isClicked?'black' : 'white'
+}
 
 return (
     <div className='listdiv'>
@@ -41,27 +49,25 @@ return (
             </div>
         </header>
         <form className='list-item-body'>
-        <div>
             <h1 className='daily'>Add Your Daily Tasks</h1>
             <div className="mytsk-btn-div">
                 <div className='my-task'>
-                    <input className='inpt-s' type="text" placeholder='my task' value={task} onChange={(e)=>setTask(e.target.value)} contentEditable/> 
+                    <input className='inpt-s' id='intp' type="text" placeholder='my task' value={task} onChange={(e)=>setTask(e.target.value)} contentEditable/> 
                     <button className='add-btn' id='add-butn' onClick={addTask}>Add</button>
+                </div>
                 </div>
                 {tasks.map((task) => (
                     <React.Fragment key={task.id}>
                     <div className='ts'>
-                        <span>{task.title}</span>
+                    <span className='list-cont'>{task.title}</span>
+                    <div className='xy'>
+                    <button id="changeid" onClick={changeStyles}><img alt='img' src={img}/></button>
+                    <button onClick ={()=> handleDelete(task)}><img alt='img' src={image}/></button>
                     </div>
-                     <div>
-                    <button><img src={img}/></button>
-                    <button onClick ={()=> handleDelete(task)}><img src={image}/></button>
                     </div>
                     </React.Fragment>
                 ))}
-            </div>
-
-        </div>
+            
         </form>
 
     </div>

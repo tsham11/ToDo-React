@@ -1,28 +1,25 @@
-import React, { useRef, useState }  from 'react';
+import React, { useRef, useState, useEffect }  from 'react';
 import { useNavigate } from 'react-router-dom';
 import imag from './cam.svg';
 import './Sign.css';
+// import { render } from 'react-dom';
+
 
 function Sign() {
 
   const navigate = useNavigate();
   const data=useRef();
+
+    // const [file, setFile] = useState<File>();
+
+
   function click(){
 
       localStorage.setItem("name", data.current.value )
-
-  //   document.querySelector("#file-upload").addEventListener("change", function(){
-  //     console.log(this.files)
-  //   const reader = new FileReader();
-
-  //   reader.addEventListener("load", ()=> {
-  //     localStorage.setItem("recent-image", reader.result);
-  //   });
-  //   reader.readAsDataURL(this.files[0]);
-   
-  // });
-
-  navigate('/list');
+        if (!image) {
+      return;
+    }
+      navigate('/list');
   }
 
   const [image, setImage] = useState({ preview: "", raw: "" });
@@ -32,10 +29,24 @@ function Sign() {
         preview: URL.createObjectURL(e.target.files[0]),
         raw: e.target.files[0]
       });
+      console.log(e.target.files[0]);
+      console.log(setImage.preview)
     }
   };
- 
-  // navigate('/list')
+
+ useEffect(() => {
+  const input = document.getElementById('file-upload');
+
+  input.addEventListener('change', (e) => {
+    const image = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(image);
+    reader.addEventListener('load', () => {
+        localStorage.setItem('file-upload', reader.result);
+    });
+  });
+}, []);
+  
 
   return (
     <div>

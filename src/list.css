@@ -1,5 +1,9 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
 
+*{
+  border-style: dashed;
+  border: chartreuse;
+}
 
 .listdiv{
   width: 100%;
@@ -41,10 +45,18 @@ top: 15px;
 margin-right: 28px;
 width: 68px;
 height: 68px;
+background-size: cover;
+
 /* UI Properties */
 background: #E6EBFF 0% 0% no-repeat padding-box;
 border-radius: 50%;
 opacity: 1;
+}
+
+img#prof-pic{
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
 }
 
 .list-name{
@@ -129,6 +141,7 @@ opacity: 1;
   display: flex;
   justify-content: flex-end;
   margin-right: 11.7px;
+  
 }
 
 .my-task{
@@ -142,7 +155,7 @@ display: flex;
 justify-content: left;
 }
 
-.ts{
+#list-ts{
   margin: 16px auto; 
     width: 595px;
     height: 54px;
@@ -155,8 +168,31 @@ justify-content: left;
       align-items: center;
     /* flex-direction: row; */
     color:white;
+        transition: opacity .3s linear;
+
 }
 
+/* 
+div.ts.done{
+    /* opacity: 0.3; 
+}
+ */
+
+
+.done-item{
+  margin: 16px auto; 
+    width: 595px;
+    height: 54px;
+    /* UI Properties */
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+      align-items: center;
+    /* flex-direction: row; */
+    color:white;
+}
 
 .add-btn{
   margin-right: 205px;
@@ -189,3 +225,31 @@ text-transform: capitalize;
 opacity: 1;
 }
 
+#changeid{
+  margin-right: 6px;
+}
+
+#changeid, #deleteid{
+  background-color: #000000;
+  border: none;
+  width: 48px;
+height: 54px;
+  transition: 0.5s;
+
+}
+
+#changeid:hover{
+  width: 48px;
+height: 54px;
+  background: #5EFC8D 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+#deleteid:hover{
+  width: 48px;
+height: 54px;
+  background: #FC5E5E 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+}

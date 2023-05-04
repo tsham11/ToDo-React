@@ -1,11 +1,8 @@
-import React, {useState, useEffect, useLocation } from 'react';
+import React, {useState, useEffect } from 'react';
 import './list.css';
 import img from './done.svg';
 import image from './delete_forever.svg';
-// import { click } from '@testing-library/user-event/dist/click';
-// import ReactDOM from 'react-dom/client';
 import { v4 as uuidv4 } from 'uuid';
-// import { useNavigate } from "react-router-dom";
 
 
 function List() {
@@ -16,32 +13,6 @@ function List() {
     // for to do list
     const [taskInpt, setTaskInpt] = useState("");
     const [tasksTodo, setTasksTodo] = useState([]);
-
-//      const history = useNavigate();
-
-//   useEffect(() => {
-//     const unblock = history. ((location) => {
-//       // Check if the user is trying to navigate away from the current page
-//       if (location.pathname !== "/list") {
-//         // If the user is trying to navigate away, prevent the change and stay on the current page
-//         return false;
-//       }
-//       // If the user is not trying to navigate away, allow the change and continue
-//       return true;
-//     });
-
-//     // Return a cleanup function to remove the subscription when the component unmounts
-//     return unblock;
-//   }, [history]);
-     const location = useLocation();
-     console.log(location);
-
-
-  useEffect(() => {
-    if (location.pathname !== "/list") {
-      window.history.pushState(null, null, "/list");
-    }
-  }, [location.pathname]);
     
 
     useEffect(()=>{
